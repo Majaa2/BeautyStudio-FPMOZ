@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Zaposlenici">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#skloni" prefHeight="371.0" prefWidth="577.0">
+                     <children>
+                        <TableView fx:id="zaposlenikTablica" layoutX="6.0" layoutY="6.0" onMouseClicked="#odaberiZaposlenika" prefHeight="372.0" prefWidth="380.0">
+                          <columns>
+                            <TableColumn fx:id="zaposlenikId" prefWidth="40.0" text="#" />
+                            <TableColumn fx:id="zaposlenikIme" prefWidth="61.0" text="Ime" />
+                              <TableColumn fx:id="zaposlenikPrezime" prefWidth="67.0" text="Prezime" />
+                              <TableColumn fx:id="zaposlenikEmail" prefWidth="56.0" text="email" />
+                              <TableColumn fx:id="zaposlenikKime" prefWidth="98.0" text="Korisničko ime" />
+                              <TableColumn fx:id="zaposlenikLozinka" prefWidth="57.0" text="lozinka" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="zIme" layoutX="403.0" layoutY="47.0" prefHeight="25.0" prefWidth="175.0" promptText="Ime" />
+                        <TextField fx:id="zPrezime" layoutX="403.0" layoutY="85.0" prefHeight="25.0" prefWidth="175.0" promptText="Prezime" />
+                        <TextField fx:id="zEmail" layoutX="403.0" layoutY="120.0" prefHeight="25.0" prefWidth="175.0" promptText="Email" />
+                        <TextField fx:id="zKime" layoutX="403.0" layoutY="161.0" prefHeight="25.0" prefWidth="175.0" promptText="Korisnicko ime" />
+                        <PasswordField fx:id="zLozinka" layoutX="404.0" layoutY="201.0" prefHeight="25.0" prefWidth="174.0" promptText="Lozinka" />
+                        <Label layoutX="404.0" layoutY="20.0" text="Unesite podatke o zaposleniku" textFill="#286375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="dodajBtn" layoutX="419.0" layoutY="252.0" mnemonicParsing="false" onAction="#dodajZaposlenika" text="Dodaj " />
+                        <Button fx:id="izbrisiBtn" layoutX="499.0" layoutY="252.0" mnemonicParsing="false" onAction="#izbrisiZaposlenika" text="Izbriši" />
+                        <Button fx:id="odjavaBtn1" layoutX="507.0" layoutY="323.0" mnemonicParsing="false" onAction="#odjava" text="Odjava" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Usluge">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#skloni" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="uslugaTablica" layoutX="1.0" layoutY="1.0" onMouseClicked="#odaberiUslugu" prefHeight="373.0" prefWidth="325.0">
+                          <columns>
+                            <TableColumn fx:id="uslugaId" prefWidth="65.0" text="#" />
+                            <TableColumn fx:id="uslugaNaziv" prefWidth="78.0" text="Naziv" />
+                              <TableColumn fx:id="uslugaVrsta" prefWidth="70.0" text="Vrsta" />
+                              <TableColumn fx:id="uslugaCijena" prefWidth="83.0" text="Cijena" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="380.0" layoutY="24.0" />
+                        <Label layoutX="364.0" layoutY="16.0" text="Unesite podatke o usluzi" textFill="#286375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="uNaziv" layoutX="364.0" layoutY="51.0" prefHeight="25.0" prefWidth="164.0" promptText="Naziv" />
+                        <TextField fx:id="uVrsta" layoutX="364.0" layoutY="91.0" prefHeight="25.0" prefWidth="165.0" promptText="Vrsta" />
+                        <TextField fx:id="uCijena" layoutX="366.0" layoutY="131.0" prefHeight="25.0" prefWidth="165.0" promptText="Cijena" />
+                        <Button fx:id="dodajSlikuBtn" layoutX="365.0" layoutY="280.0" mnemonicParsing="false" onAction="#dodajSliku" prefHeight="25.0" prefWidth="168.0" text="Dodaj sliku" />
+                        <Button fx:id="dodajUsluguBtn" layoutX="366.0" layoutY="319.0" mnemonicParsing="false" onAction="#dodajUslugu" text="Dodaj" />
+                        <Button fx:id="izbrisiUsluguBtn" layoutX="461.0" layoutY="319.0" mnemonicParsing="false" onAction="#izbrisiUslugu" text="Izbrisi" />
+                        <ImageView fx:id="uSlika" fitHeight="101.0" fitWidth="165.0" layoutX="368.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="odjavaBtn2" layoutX="528.0" layoutY="332.0" mnemonicParsing="false" onAction="#odjava" text="Odjava" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Klijenti">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#skloni" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="klijentTablica" onMouseClicked="#odaberiKlijenta" prefHeight="372.0" prefWidth="380.0">
+                           <columns>
+                              <TableColumn fx:id="klijentId" prefWidth="40.0" text="#" />
+                              <TableColumn fx:id="klijentIme" prefWidth="61.0" text="Ime" />
+                              <TableColumn fx:id="klijentPrezime" prefWidth="67.0" text="Prezime" />
+                              <TableColumn fx:id="klijentEmail" prefWidth="56.0" text="email" />
+                              <TableColumn fx:id="klijentKime" prefWidth="98.0" text="Korisničko ime" />
+                              <TableColumn fx:id="klijentLozinka" prefWidth="57.0" text="lozinka" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="390.0" layoutY="14.0" text="Unesite podatke o zaposleniku" textFill="#286375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="klIme" layoutX="389.0" layoutY="41.0" prefHeight="25.0" prefWidth="175.0" promptText="Ime" />
+                        <TextField fx:id="klPrezime" layoutX="389.0" layoutY="76.0" prefHeight="25.0" prefWidth="175.0" promptText="Prezime" />
+                        <TextField fx:id="klEmail" layoutX="389.0" layoutY="111.0" prefHeight="25.0" prefWidth="175.0" promptText="Email" />
+                        <TextField fx:id="klKime" layoutX="389.0" layoutY="150.0" prefHeight="25.0" prefWidth="175.0" promptText="Korisnicko ime" />
+                        <PasswordField fx:id="klLozinka" layoutX="390.0" layoutY="194.0" prefHeight="25.0" prefWidth="174.0" promptText="Lozinka" />
+                        <Button fx:id="dodajklBtn" layoutX="397.0" layoutY="243.0" mnemonicParsing="false" onAction="#dodajKlijenta" text="Dodaj " />
+                        <Button fx:id="izbrisikl" layoutX="484.0" layoutY="243.0" mnemonicParsing="false" onAction="#izbrisiKlijenta" text="Izbriši" />
+                        <Button fx:id="odjavaBtn3" layoutX="511.0" layoutY="324.0" mnemonicParsing="false" onAction="#odjava" text="Odjava" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rezervacije">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="rezervacijaTablica" layoutX="4.0" layoutY="2.0" onMouseClicked="#odaberiRezervaciju" prefHeight="366.0" prefWidth="348.0">
+                          <columns>
+                            <TableColumn fx:id="rezervacijaId" prefWidth="75.0" text="#" />
+                            <TableColumn fx:id="rezervacijaDatum" prefWidth="75.0" text="datum" />
+                              <TableColumn fx:id="rezervacijaKlijent" prefWidth="75.0" text="klijent ID" />
+                              <TableColumn fx:id="rezervacijaUsluga" prefWidth="75.0" text="usluga ID" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="376.0" layoutY="14.0" text="Unesite podatke o rezervaciji" textFill="#286375">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rKlijent" layoutX="376.0" layoutY="111.0" promptText="Klijent id" />
+                        <TextField fx:id="rUsluga" layoutX="376.0" layoutY="173.0" promptText="Usluga id" />
+                        <Button fx:id="dodajRezBtn" layoutX="376.0" layoutY="235.0" mnemonicParsing="false" onAction="#dodajRez" text="Dodaj " />
+                        <Button fx:id="izbrisiRezBtn" layoutX="465.0" layoutY="235.0" mnemonicParsing="false" onAction="#izbrisiRez" text="Izbriši" />
+                        <TextField fx:id="rDatum" layoutX="376.0" layoutY="55.0" promptText="Datum" />
+                        <Button fx:id="odjavaBtn4" layoutX="525.0" layoutY="320.0" mnemonicParsing="false" onAction="#odjava" text="Odjava" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Statistika">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="statistikaTablica" prefHeight="370.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn fx:id="nazivKlijenta" prefWidth="259.0" text="Naziv klijenta" />
+                            <TableColumn fx:id="brojRezervacija" prefWidth="340.0" text="Broj rezervacija" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

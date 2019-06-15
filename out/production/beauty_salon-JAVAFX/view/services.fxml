@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Services">
+   <children>
+      <GridPane fx:id="panee" layoutY="14.0" prefHeight="385.0" prefWidth="523.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="177.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="215.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="209.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="118.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="natragBtn" layoutX="534.0" layoutY="347.0" mnemonicParsing="false" onAction="#natrag" text="Natrag" />
+   </children>
+</AnchorPane>
